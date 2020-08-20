@@ -4,6 +4,7 @@ import (
 	"context"
 	"github.com/gin-gonic/gin"
 	"github.com/ycjiafei/go-micro-project/api/model"
+	"github.com/ycjiafei/go-micro-project/database/structs"
 	pb "github.com/ycjiafei/go-micro-project/user-srv/proto"
 	"google.golang.org/appengine/log"
 	"google.golang.org/grpc"
@@ -28,7 +29,7 @@ func NewUserService(c *gin.Context) (*userService, error) {
 }
 
 
-func (us userService) GetUserInfoByID(uid int64) model.UserInfo {
+func (us userService) GetUserInfoByID(uid int64) structs.UserInfo {
 	cli := pb.NewUserClient(us.conn)
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()

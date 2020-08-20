@@ -18,7 +18,6 @@ func Login(c *gin.Context) {
 		FailResp(c, errcode.MissArgument, err.Error())
 		return
 	}
-	fmt.Println(form)
 	srv, err := service.NewUserService(c)
 	if err != nil {
 		FailResp(c, errcode.NewServiceFail, err.Error())
