@@ -83,10 +83,13 @@ github.com/ugorji/go v1.1.7/go.mod h1:kZn38zHttfInRq0xu/PH0az30d+z6vm202qpg1oXVM
 github.com/ugorji/go/codec v1.1.7 h1:2SvQaVZ1ouYrrKKwoSk2pzd4A9evlKJb9oTL+OaLUSs=
 github.com/ugorji/go/codec v1.1.7/go.mod h1:Ax+UKWsSmolVDwsd+7N3ZtXu+yMGCf907BLYF3GoBXY=
 github.com/ycjiafei/go-micro-project v0.0.0-20200820081257-9b3ab94532c4 h1:AdkGY8HlxNSX7FyE5UWJ4hGjUsLL7r9Ln04QSt/r8wE=
+github.com/ycjiafei/go-micro-project v0.0.0-20200820090751-ccc1b42fe104 h1:l+5/ZllHTO9k+l1jCS7ZbKrbXKerFANU0ErdYIch38w=
 github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200820081257-9b3ab94532c4 h1:3JzSKpRjQcv3xLiGmgiOBR8ROc8eWjpSPpQCI2hvV3w=
 github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200820081257-9b3ab94532c4/go.mod h1:ACyjHwUYQs9Lsgfghavpsf5gOyJt2wdtzlMkmfis49o=
 github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200820082843-b4bc2c518863 h1:U5qEhbfvOkNa0n0r/UMdfd5BlPhoFjOZ2GXQ4SGDPOw=
 github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200820082843-b4bc2c518863/go.mod h1:ACyjHwUYQs9Lsgfghavpsf5gOyJt2wdtzlMkmfis49o=
+github.com/ycjiafei/go-micro-project/user-srv v0.0.0-20200820095928-122563965189 h1:t7/gxjyf7KKQ9A0ge4vHGD1WZjtuAJGLCNK0oorfk4s=
+github.com/ycjiafei/go-micro-project/user-srv v0.0.0-20200820095928-122563965189/go.mod h1:IPvOBPevfUk2nmhSIGpZIMYDoOPqSXj2IkmcyJKtVN0=
 go.uber.org/atomic v1.6.0/go.mod h1:sABNBOSYdrvTF6hTgEIbc7YasKWGhgEQZyfxyTvoXHQ=
 go.uber.org/multierr v1.5.0/go.mod h1:FeouvMocqHpRaaGuG9EjoKcStLC43Zu/fmqdUMPcKYU=
 go.uber.org/tools v0.0.0-20190618225709-2cfd321de3ee/go.mod h1:vJERXedbb3MVM5f9Ejo0C68/HhF8uaILCdgjnY+goOA=

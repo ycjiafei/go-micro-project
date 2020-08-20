@@ -2,6 +2,7 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/ycjiafei/go-micro-project/api/service"
 	"github.com/ycjiafei/go-micro-project/pkg/errcode"
 )
 
@@ -15,6 +16,9 @@ func Login(c *gin.Context) {
 		FailResp(c, errcode.MissArgument, err)
 		return
 	}
-
-	SuccessResp(c, "登录成功")
+	srv, err := service.NewUserService(c)
+	if err != nil {
+		FailResp(c, errcode.NewServiceFail, err)
+	}
+	SuccessResp(c, srv.GetUserInfoByID(1))
 }
