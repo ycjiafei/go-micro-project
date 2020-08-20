@@ -5,3 +5,7 @@ type UserInfo struct {
 	Name string
 	Phone string
 }
+
+func (info UserInfo) TableName() string {
+	return "user_info"
+}

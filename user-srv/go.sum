@@ -44,6 +44,10 @@ github.com/ycjiafei/go-micro-project v0.0.0-20200820083712-e382b2a46cfb h1:kcgcb
 github.com/ycjiafei/go-micro-project v0.0.0-20200820103331-ef821cdb280f h1:ISehRSaMVjjFdjU/5alGj/DaabjT92oGpy7tyoVzGmE=
 github.com/ycjiafei/go-micro-project/database v0.0.0-20200820103331-ef821cdb280f h1:qBGv05irTp7zfOT3dMrAjZluoNkzz/bmn5LO+kczLdk=
 github.com/ycjiafei/go-micro-project/database v0.0.0-20200820103331-ef821cdb280f/go.mod h1:9B18gn49ZQU4RJmITeY/xcenobkgJ3LSvL7JJzZLRY0=
+github.com/ycjiafei/go-micro-project/database v0.0.0-20200820123311-fa3e4c3bb126 h1:6D2wQzWcE/udpIugm7DjsPGW99wIGhWax/oN+nJXvSE=
+github.com/ycjiafei/go-micro-project/database v0.0.0-20200820123311-fa3e4c3bb126/go.mod h1:9B18gn49ZQU4RJmITeY/xcenobkgJ3LSvL7JJzZLRY0=
+github.com/ycjiafei/go-micro-project/database v0.0.0-20200820125343-b0b51cbe68ca h1:yWaGqHxqOqhsJdsfH75tDb+XipELa5bKzQ/gsmwIF2E=
+github.com/ycjiafei/go-micro-project/database v0.0.0-20200820125343-b0b51cbe68ca/go.mod h1:9B18gn49ZQU4RJmITeY/xcenobkgJ3LSvL7JJzZLRY0=
 github.com/ycjiafei/go-micro-project/proto v0.0.0-20200820083712-e382b2a46cfb h1:MX6Y7Sl9t58bLo3sj8nGImMDxVWpu8b/V3C0wVp0u+Q=
 github.com/ycjiafei/go-micro-project/proto v0.0.0-20200820083712-e382b2a46cfb/go.mod h1:X1TNZBcoOj9rPqCOajrgujbdULBP53ZqIZCrdODo0yo=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
