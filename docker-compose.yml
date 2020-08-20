@@ -26,6 +26,8 @@ services:
       - db
       - user-server
     build: ./api
+    ports:
+    - 8080:8080
     environment:
       USER_GRPC_HOST: user-server:50050
 volumes:
