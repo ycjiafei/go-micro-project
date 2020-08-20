@@ -1,0 +1,32 @@
+version:  '3.3'
+
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+    - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: go-micro
+      MYSQL_USER: micro
+      MYSQL_PASSWORD: micro
+
+  user-server:
+    depends_on:
+      - db
+    build: ./user-srv
+    environment:
+      GO_MICRO_DB_HOST: db:3306
+      GO_MICRO_DB_USER: micro
+      GO_MICRO_DB_PASSWORD: micro
+      GO_MICRO_DB_NAME: go-micro
+
+  api-server:
+    depends_on:
+      - db
+      - user-server
+    build: ./api
+    environment:
+      USER_GRPC_HOST: user-server:50050
+volumes:
+  db_data: {}

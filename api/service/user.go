@@ -7,6 +7,7 @@ import (
 	pb "github.com/ycjiafei/go-micro-project/user-srv/proto"
 	"google.golang.org/appengine/log"
 	"google.golang.org/grpc"
+	"os"
 	"time"
 )
 
@@ -17,7 +18,7 @@ type userService struct {
 
 func NewUserService(c *gin.Context) (*userService, error) {
 	conn, err := grpc.Dial(
-		"127.0.0.1:50050",
+		os.Getenv("USER_GRPC_HOST"),
 		grpc.WithInsecure(),
 		grpc.WithBlock(),
 	)
