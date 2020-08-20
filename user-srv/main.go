@@ -1,1 +1,5 @@
-package user_srv
+package main
+
+func main() {
+
+}
