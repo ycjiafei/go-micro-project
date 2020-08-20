@@ -12,7 +12,6 @@ func InitRoutes() *gin.Engine {
 			"message": "pong",
 		})
 	})
-
 	r.POST("/login", handler.Login)
 	return r
 }

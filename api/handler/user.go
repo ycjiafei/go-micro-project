@@ -15,5 +15,6 @@ func Login(c *gin.Context) {
 		FailResp(c, errcode.MissArgument, err)
 		return
 	}
+
 	SuccessResp(c, "登录成功")
 }
