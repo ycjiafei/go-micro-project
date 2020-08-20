@@ -1,0 +1,17 @@
+syntax = "proto3";
+option go_package = "proto/user";
+
+package user;
+
+service User {
+  rpc GetUserByID (UidResp) returns (UserInfoReply) {}
+}
+
+message UidResp {
+  string uid = 1;
+}
+
+message UserInfoReply {
+  string id = 1;
+  string name = 2;
+}
