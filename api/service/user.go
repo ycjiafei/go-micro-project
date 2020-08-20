@@ -42,3 +42,18 @@ func (us userService) GetUserInfoByID(uid int64) structs.UserInfo {
 		Phone: response.Phone,
 	}
 }
+
+func (us userService) GetUserInfoByPhone(phone string) structs.UserInfo {
+	cli := pb.NewUserClient(us.conn)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
+	defer cancel()
+	response, err := cli.GetUserByPhone(ctx, &pb.PhoneReq{Phone: phone})
+	if err != nil {
+		log.Errorf(ctx,"GRPC 请求错误, 错误方法 GetUserByID, err: %v", err)
+	}
+	return structs.UserInfo{
+		ID:response.Id,
+		Name: response.Name,
+		Phone: response.Phone,
+	}
+}

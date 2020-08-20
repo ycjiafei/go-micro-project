@@ -9,7 +9,7 @@ import (
 
 func Login(c *gin.Context) {
 	type login struct {
-		Phone int64 `json:"phone" binding:"required"`
+		Phone string `json:"phone" binding:"required"`
 		Code int `json:"code" binding:"required"`
 	}
 	form := login{}
@@ -23,5 +23,5 @@ func Login(c *gin.Context) {
 		FailResp(c, errcode.NewServiceFail, err.Error())
 		return
 	}
-	SuccessResp(c, srv.GetUserInfoByID(1))
+	SuccessResp(c, srv.GetUserInfoByPhone(form.Phone))
 }

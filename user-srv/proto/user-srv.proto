@@ -5,14 +5,19 @@ package proto;
 
 service User {
   rpc GetUserByID (UidReq) returns (UserInfoReply) {}
+  rpc GetUserByPhone (PhoneReq) returns (UserInfoReply) {}
 }
 
 message UidReq {
   int64 uid = 1;
 }
 
+message PhoneReq {
+  string phone = 1;
+}
+
 message UserInfoReply {
   int64 id = 1;
   string name = 2;
-  int64 phone = 3;
+  string phone = 3;
 }
