@@ -28,6 +28,7 @@ github.com/go-playground/validator/v10 v10.2.0 h1:KgJ0snyC2R9VXYN2rneOtQcw5aHQB1
 github.com/go-playground/validator/v10 v10.2.0/go.mod h1:uOYAAleCW8F/7oMFd6aG0GOhaH6EGOAJShg8Id5JGkI=
 github.com/go-playground/validator/v10 v10.3.0 h1:nZU+7q+yJoFmwvNgv/LnPUkwPal62+b2xXj0AU1Es7o=
 github.com/go-playground/validator/v10 v10.3.0/go.mod h1:uOYAAleCW8F/7oMFd6aG0GOhaH6EGOAJShg8Id5JGkI=
+github.com/go-sql-driver/mysql v1.5.0 h1:ozyZYNQW3x3HtqT1jira07DN2PArx2v7/mN66gGcHOs=
 github.com/go-sql-driver/mysql v1.5.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
 github.com/golang-sql/civil v0.0.0-20190719163853-cb61b32ac6fe/go.mod h1:8vg3r2VgvsThLBIFL93Qb5yWzgyZWhEmBwUJWevAkK0=
 github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b/go.mod h1:SBH7ygxi8pfUlaOkMMuAQtPIUF8ecWP5IEl/CR7VP2Q=
@@ -52,7 +53,9 @@ github.com/google/go-cmp v0.5.0 h1:/QaMHBdZ26BB3SSst0Iwl10Epc+xhTquomWX0oZEB6w=
 github.com/google/go-cmp v0.5.0/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
 github.com/google/gofuzz v1.0.0/go.mod h1:dBl0BpW6vV/+mYPU4Po3pmUjxk6FQPldtuIdl/M65Eg=
 github.com/google/renameio v0.1.0/go.mod h1:KWCgfxg9yswjAJkECMjeO8J8rahYeXnNhOm40UhjYkI=
+github.com/jinzhu/gorm v1.9.16 h1:+IyIjPEABKRpsu/F8OvDPy9fyQlgsg2luMV2ZIH5i5o=
 github.com/jinzhu/gorm v1.9.16/go.mod h1:G3LB3wezTOWM2ITLzPxEXgSkOXAntiLHS7UdBefADcs=
+github.com/jinzhu/inflection v1.0.0 h1:K317FqzuhWc8YvSVlFMCCUb36O/S9MCKRDI7QkRKD/E=
 github.com/jinzhu/inflection v1.0.0/go.mod h1:h+uFLlag+Qp1Va5pdKtLDYj+kHp5pxUVkryuEj+Srlc=
 github.com/jinzhu/now v1.0.1/go.mod h1:d3SSVoowX0Lcu0IBviAWJpolVfI5UJVZZ7cO71lE/z8=
 github.com/json-iterator/go v1.1.9 h1:9yzud/Ht36ygwatGx56VwCZtlI/2AD15T1X2sjSuGns=
@@ -98,6 +101,8 @@ github.com/ycjiafei/go-micro-project v0.0.0-20200820090751-ccc1b42fe104 h1:l+5/Z
 github.com/ycjiafei/go-micro-project v0.0.0-20200820101814-0a4db0b71b17 h1:0SAJzldmcpOP2JhyQcsC9gwi7ef1uJt3z/b2mWQ5ZMk=
 github.com/ycjiafei/go-micro-project/database v0.0.0-20200820102827-d2ea4e873921 h1:d/z3TN8KJ1GJWDnnfLVhzdsi1SdqhbgO1027sstdTmU=
 github.com/ycjiafei/go-micro-project/database v0.0.0-20200820102827-d2ea4e873921/go.mod h1:9B18gn49ZQU4RJmITeY/xcenobkgJ3LSvL7JJzZLRY0=
+github.com/ycjiafei/go-micro-project/database v0.0.0-20200820103331-ef821cdb280f h1:qBGv05irTp7zfOT3dMrAjZluoNkzz/bmn5LO+kczLdk=
+github.com/ycjiafei/go-micro-project/database v0.0.0-20200820103331-ef821cdb280f/go.mod h1:9B18gn49ZQU4RJmITeY/xcenobkgJ3LSvL7JJzZLRY0=
 github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200820081257-9b3ab94532c4 h1:3JzSKpRjQcv3xLiGmgiOBR8ROc8eWjpSPpQCI2hvV3w=
 github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200820081257-9b3ab94532c4/go.mod h1:ACyjHwUYQs9Lsgfghavpsf5gOyJt2wdtzlMkmfis49o=
 github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200820082843-b4bc2c518863 h1:U5qEhbfvOkNa0n0r/UMdfd5BlPhoFjOZ2GXQ4SGDPOw=
