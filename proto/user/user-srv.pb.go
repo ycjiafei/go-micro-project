@@ -29,16 +29,16 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-type UidResp struct {
+type UidReq struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Uid string `protobuf:"bytes,1,opt,name=uid,proto3" json:"uid,omitempty"`
+	Uid int64 `protobuf:"varint,1,opt,name=uid,proto3" json:"uid,omitempty"`
 }
 
-func (x *UidResp) Reset() {
-	*x = UidResp{}
+func (x *UidReq) Reset() {
+	*x = UidReq{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_proto_user_user_srv_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -46,13 +46,13 @@ func (x *UidResp) Reset() {
 	}
 }
 
-func (x *UidResp) String() string {
+func (x *UidReq) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*UidResp) ProtoMessage() {}
+func (*UidReq) ProtoMessage() {}
 
-func (x *UidResp) ProtoReflect() protoreflect.Message {
+func (x *UidReq) ProtoReflect() protoreflect.Message {
 	mi := &file_proto_user_user_srv_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -64,16 +64,16 @@ func (x *UidResp) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use UidResp.ProtoReflect.Descriptor instead.
-func (*UidResp) Descriptor() ([]byte, []int) {
+// Deprecated: Use UidReq.ProtoReflect.Descriptor instead.
+func (*UidReq) Descriptor() ([]byte, []int) {
 	return file_proto_user_user_srv_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *UidResp) GetUid() string {
+func (x *UidReq) GetUid() int64 {
 	if x != nil {
 		return x.Uid
 	}
-	return ""
+	return 0
 }
 
 type UserInfoReply struct {
@@ -81,8 +81,9 @@ type UserInfoReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id   string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	Name string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	Id    int64  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
+	Name  string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	Phone int64  `protobuf:"varint,3,opt,name=phone,proto3" json:"phone,omitempty"`
 }
 
 func (x *UserInfoReply) Reset() {
@@ -117,11 +118,11 @@ func (*UserInfoReply) Descriptor() ([]byte, []int) {
 	return file_proto_user_user_srv_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *UserInfoReply) GetId() string {
+func (x *UserInfoReply) GetId() int64 {
 	if x != nil {
 		return x.Id
 	}
-	return ""
+	return 0
 }
 
 func (x *UserInfoReply) GetName() string {
@@ -131,22 +132,30 @@ func (x *UserInfoReply) GetName() string {
 	return ""
 }
 
+func (x *UserInfoReply) GetPhone() int64 {
+	if x != nil {
+		return x.Phone
+	}
+	return 0
+}
+
 var File_proto_user_user_srv_proto protoreflect.FileDescriptor
 
 var file_proto_user_user_srv_proto_rawDesc = []byte{
 	0x0a, 0x19, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x75, 0x73, 0x65, 0x72, 0x2f, 0x75, 0x73, 0x65,
 	0x72, 0x2d, 0x73, 0x72, 0x76, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x04, 0x75, 0x73, 0x65,
-	0x72, 0x22, 0x1b, 0x0a, 0x07, 0x55, 0x69, 0x64, 0x52, 0x65, 0x73, 0x70, 0x12, 0x10, 0x0a, 0x03,
-	0x75, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x75, 0x69, 0x64, 0x22, 0x33,
-	0x0a, 0x0d, 0x55, 0x73, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x12,
-	0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x69, 0x64, 0x12,
-	0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e,
-	0x61, 0x6d, 0x65, 0x32, 0x3b, 0x0a, 0x04, 0x55, 0x73, 0x65, 0x72, 0x12, 0x33, 0x0a, 0x0b, 0x47,
-	0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x42, 0x79, 0x49, 0x44, 0x12, 0x0d, 0x2e, 0x75, 0x73, 0x65,
-	0x72, 0x2e, 0x55, 0x69, 0x64, 0x52, 0x65, 0x73, 0x70, 0x1a, 0x13, 0x2e, 0x75, 0x73, 0x65, 0x72,
-	0x2e, 0x55, 0x73, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00,
-	0x42, 0x0c, 0x5a, 0x0a, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x75, 0x73, 0x65, 0x72, 0x62, 0x06,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x72, 0x22, 0x1a, 0x0a, 0x06, 0x55, 0x69, 0x64, 0x52, 0x65, 0x71, 0x12, 0x10, 0x0a, 0x03, 0x75,
+	0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x03, 0x75, 0x69, 0x64, 0x22, 0x49, 0x0a,
+	0x0d, 0x55, 0x73, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x12, 0x0e,
+	0x0a, 0x02, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x02, 0x69, 0x64, 0x12, 0x12,
+	0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61,
+	0x6d, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x70, 0x68, 0x6f, 0x6e, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28,
+	0x03, 0x52, 0x05, 0x70, 0x68, 0x6f, 0x6e, 0x65, 0x32, 0x3a, 0x0a, 0x04, 0x55, 0x73, 0x65, 0x72,
+	0x12, 0x32, 0x0a, 0x0b, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x42, 0x79, 0x49, 0x44, 0x12,
+	0x0c, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x55, 0x69, 0x64, 0x52, 0x65, 0x71, 0x1a, 0x13, 0x2e,
+	0x75, 0x73, 0x65, 0x72, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x65, 0x70,
+	0x6c, 0x79, 0x22, 0x00, 0x42, 0x0c, 0x5a, 0x0a, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x75, 0x73,
+	0x65, 0x72, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -163,11 +172,11 @@ func file_proto_user_user_srv_proto_rawDescGZIP() []byte {
 
 var file_proto_user_user_srv_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_proto_user_user_srv_proto_goTypes = []interface{}{
-	(*UidResp)(nil),       // 0: user.UidResp
+	(*UidReq)(nil),        // 0: user.UidReq
 	(*UserInfoReply)(nil), // 1: user.UserInfoReply
 }
 var file_proto_user_user_srv_proto_depIdxs = []int32{
-	0, // 0: user.User.GetUserByID:input_type -> user.UidResp
+	0, // 0: user.User.GetUserByID:input_type -> user.UidReq
 	1, // 1: user.User.GetUserByID:output_type -> user.UserInfoReply
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
@@ -183,7 +192,7 @@ func file_proto_user_user_srv_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_proto_user_user_srv_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UidResp); i {
+			switch v := v.(*UidReq); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -239,7 +248,7 @@ const _ = grpc.SupportPackageIsVersion6
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type UserClient interface {
-	GetUserByID(ctx context.Context, in *UidResp, opts ...grpc.CallOption) (*UserInfoReply, error)
+	GetUserByID(ctx context.Context, in *UidReq, opts ...grpc.CallOption) (*UserInfoReply, error)
 }
 
 type userClient struct {
@@ -250,7 +259,7 @@ func NewUserClient(cc grpc.ClientConnInterface) UserClient {
 	return &userClient{cc}
 }
 
-func (c *userClient) GetUserByID(ctx context.Context, in *UidResp, opts ...grpc.CallOption) (*UserInfoReply, error) {
+func (c *userClient) GetUserByID(ctx context.Context, in *UidReq, opts ...grpc.CallOption) (*UserInfoReply, error) {
 	out := new(UserInfoReply)
 	err := c.cc.Invoke(ctx, "/user.User/GetUserByID", in, out, opts...)
 	if err != nil {
@@ -261,14 +270,14 @@ func (c *userClient) GetUserByID(ctx context.Context, in *UidResp, opts ...grpc.
 
 // UserServer is the server API for User service.
 type UserServer interface {
-	GetUserByID(context.Context, *UidResp) (*UserInfoReply, error)
+	GetUserByID(context.Context, *UidReq) (*UserInfoReply, error)
 }
 
 // UnimplementedUserServer can be embedded to have forward compatible implementations.
 type UnimplementedUserServer struct {
 }
 
-func (*UnimplementedUserServer) GetUserByID(context.Context, *UidResp) (*UserInfoReply, error) {
+func (*UnimplementedUserServer) GetUserByID(context.Context, *UidReq) (*UserInfoReply, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetUserByID not implemented")
 }
 
@@ -277,7 +286,7 @@ func RegisterUserServer(s *grpc.Server, srv UserServer) {
 }
 
 func _User_GetUserByID_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(UidResp)
+	in := new(UidReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -289,7 +298,7 @@ func _User_GetUserByID_Handler(srv interface{}, ctx context.Context, dec func(in
 		FullMethod: "/user.User/GetUserByID",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).GetUserByID(ctx, req.(*UidResp))
+		return srv.(UserServer).GetUserByID(ctx, req.(*UidReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }

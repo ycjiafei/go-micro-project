@@ -4,10 +4,10 @@ option go_package = "proto/user";
 package user;
 
 service User {
-  rpc GetUserByID (UidResp) returns (UserInfoReply) {}
+  rpc GetUserByID (UidReq) returns (UserInfoReply) {}
 }
 
-message UidResp {
+message UidReq {
   int64 uid = 1;
 }
 
