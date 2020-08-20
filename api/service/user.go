@@ -3,7 +3,6 @@ package service
 import (
 	"context"
 	"github.com/gin-gonic/gin"
-	"github.com/ycjiafei/go-micro-project/api/model"
 	"github.com/ycjiafei/go-micro-project/database/structs"
 	pb "github.com/ycjiafei/go-micro-project/user-srv/proto"
 	"google.golang.org/appengine/log"
@@ -37,7 +36,7 @@ func (us userService) GetUserInfoByID(uid int64) structs.UserInfo {
 	if err != nil {
 		log.Errorf(ctx,"GRPC 请求错误, 错误方法 GetUserByID, err: %v", err)
 	}
-	return model.UserInfo{
+	return structs.UserInfo{
 		ID:response.Id,
 		Name: response.Name,
 		Phone: response.Phone,
