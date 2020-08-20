@@ -1,16 +1,18 @@
 package handler
 
 import (
-	"errors"
 	"github.com/gin-gonic/gin"
 	"github.com/ycjiafei/go-micro-project/pkg/errcode"
 )
 
 func Login(c *gin.Context) {
-	phone := c.PostForm("phone")
-	code := c.PostForm("code")
-	if phone == "" || code == "" {
-		FailResp(c, errcode.Bad, errors.New("缺少必要参数"))
+	type login struct {
+		Phone int64 `json:"phone" bind:"require"`
+		Code int `json:"code" bind:"require"`
+	}
+	form := login{}
+	if err := c.ShouldBindJSON(&form); err != nil {
+		FailResp(c, errcode.MissArgument, err)
 		return
 	}
 	SuccessResp(c, "登录成功")

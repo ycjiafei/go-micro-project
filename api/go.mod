@@ -9,6 +9,7 @@ require (
 	github.com/json-iterator/go v1.1.10 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.1 // indirect
+	github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200820082843-b4bc2c518863
 	golang.org/x/sys v0.0.0-20200819171115-d785dc25833f // indirect
 	google.golang.org/protobuf v1.25.0 // indirect
 	gopkg.in/yaml.v2 v2.3.0 // indirect
