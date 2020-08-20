@@ -2,7 +2,7 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/ycjiafei/go-micro-project/pkg/errcode"
+	"github.com/ycjiafei/go-micro-project/api/errcode"
 	"net/http"
 )
 
@@ -14,7 +14,7 @@ func SuccessResp(c *gin.Context, data interface{}) {
 	})
 }
 
-func FailResp(c *gin.Context, ecode int, err error) {
+func FailResp(c *gin.Context, ecode int, err string) {
 	c.JSON(http.StatusInternalServerError, gin.H{
 		"code": ecode,
 		"msg": errcode.ErrMsg[ecode],
