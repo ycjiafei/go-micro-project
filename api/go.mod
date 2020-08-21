@@ -23,6 +23,9 @@ require (
 	gopkg.in/yaml.v2 v2.3.0 // indirect
 )
 
+
+// 此举是为了方便本地开发不用频繁去 github 更新
+// 如果是部署 docker , 请注释掉
 replace (
 	github.com/ycjiafei/go-micro-project/database => ../database
 	github.com/ycjiafei/go-micro-project/pkg => ../pkg

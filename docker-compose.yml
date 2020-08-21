@@ -13,8 +13,8 @@ services:
     ports:
     - 3306:3306
   jaeger:
-    image: jaegertracing/all-in-one:latest
-      ports:
+    image: jaegertracing/all-in-one:1.18
+    ports:
         - "16686:16686"
 
   user-server:
