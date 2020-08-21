@@ -3,7 +3,10 @@ package service
 import (
 	"context"
 	"github.com/gin-gonic/gin"
+	"github.com/opentracing/opentracing-go"
+	"github.com/ycjiafei/go-micro-project/api/middleware"
 	"github.com/ycjiafei/go-micro-project/database/structs"
+	"github.com/ycjiafei/go-micro-project/pkg/trace"
 	pb "github.com/ycjiafei/go-micro-project/user-srv/proto"
 	"google.golang.org/appengine/log"
 	"google.golang.org/grpc"
@@ -21,6 +24,11 @@ func NewUserService(c *gin.Context) (*userService, error) {
 		os.Getenv("USER_GRPC_HOST"),
 		grpc.WithInsecure(),
 		grpc.WithBlock(),
+		grpc.WithUnaryInterceptor(
+			trace.ClientInterceptor(
+				opentracing.GlobalTracer(),
+				c.MustGet(middleware.SpCtx).(opentracing.SpanContext),
+		)),
 	)
 	return &userService{
 		c: c,

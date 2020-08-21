@@ -14,7 +14,7 @@ func Login(c *gin.Context) {
 	}
 	form := login{}
 	if err := c.ShouldBindJSON(&form); err != nil {
-		fmt.Println(err)
+		fmt.Printf("%+v \n",err)
 		FailResp(c, errcode.MissArgument, err.Error())
 		return
 	}
@@ -23,5 +23,10 @@ func Login(c *gin.Context) {
 		FailResp(c, errcode.NewServiceFail, err.Error())
 		return
 	}
-	SuccessResp(c, srv.GetUserInfoByPhone(form.Phone))
+	info := srv.GetUserInfoByPhone(form.Phone)
+	if info.ID == 0 {
+		FailResp(c, errcode.UserNotFound, "未找到对应手机的用户")
+		return
+	}
+	SuccessResp(c, info)
 }

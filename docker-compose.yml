@@ -12,6 +12,10 @@ services:
       MYSQL_PASSWORD: micro
     ports:
     - 3306:3306
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+      ports:
+        - "16686:16686"
 
   user-server:
     depends_on:
@@ -22,6 +26,7 @@ services:
       GO_MICRO_DB_USER: micro
       GO_MICRO_DB_PASSWORD: micro
       GO_MICRO_DB_NAME: go-micro
+      JAEGER_AGENT_HOST: jaeger:6831
 
   api-server:
     depends_on:
@@ -32,5 +37,7 @@ services:
     - 8080:8080
     environment:
       USER_GRPC_HOST: user-server:50050
+      JAEGER_AGENT_HOST: jaeger:6831
+
 volumes:
   db_data: {}
