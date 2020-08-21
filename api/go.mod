@@ -21,3 +21,9 @@ require (
 	google.golang.org/protobuf v1.25.0 // indirect
 	gopkg.in/yaml.v2 v2.3.0 // indirect
 )
+
+replace (
+	github.com/ycjiafei/go-micro-project/user-srv => ../user-srv
+	github.com/ycjiafei/go-micro-project/database => ../database
+	github.com/ycjiafei/go-micro-project/pkg => ../pkg
+)
