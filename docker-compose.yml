@@ -10,6 +10,8 @@ services:
       MYSQL_DATABASE: go-micro
       MYSQL_USER: micro
       MYSQL_PASSWORD: micro
+    ports:
+    - 3306:3306
 
   user-server:
     depends_on:
