@@ -71,6 +71,10 @@ github.com/ycjiafei/go-micro-project/database v0.0.0-20200820125343-b0b51cbe68ca
 github.com/ycjiafei/go-micro-project/database v0.0.0-20200820125343-b0b51cbe68ca/go.mod h1:9B18gn49ZQU4RJmITeY/xcenobkgJ3LSvL7JJzZLRY0=
 github.com/ycjiafei/go-micro-project/database v0.0.0-20200820133556-262eb27eaef3 h1:0EOummarlyegovtccVcn1slAxLlhOmfEieUs2Ty4qWU=
 github.com/ycjiafei/go-micro-project/database v0.0.0-20200820133556-262eb27eaef3/go.mod h1:9B18gn49ZQU4RJmITeY/xcenobkgJ3LSvL7JJzZLRY0=
+github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200821042131-829ea6b31ed4 h1:o/XU8e7oywOMJJMEW75D0eDDLmXCCxTB0LpixyP+R0U=
+github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200821042131-829ea6b31ed4/go.mod h1:ACyjHwUYQs9Lsgfghavpsf5gOyJt2wdtzlMkmfis49o=
+github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200824114841-804d97a18e5d h1:WOhUrhjwRhJeQpr+tD2vXDF59pQlNAkqifGjwspMnwY=
+github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200824114841-804d97a18e5d/go.mod h1:AAvYdMG2WNMKvhB9MCN5Xb1aQ6wNnn9z2Eo+dRmcrVA=
 github.com/ycjiafei/go-micro-project/proto v0.0.0-20200820083712-e382b2a46cfb h1:MX6Y7Sl9t58bLo3sj8nGImMDxVWpu8b/V3C0wVp0u+Q=
 github.com/ycjiafei/go-micro-project/proto v0.0.0-20200820083712-e382b2a46cfb/go.mod h1:X1TNZBcoOj9rPqCOajrgujbdULBP53ZqIZCrdODo0yo=
 go.uber.org/atomic v1.6.0 h1:Ezj3JGmsOnG1MoRWQkPBsKLe9DwWD9QeXzTRzzldNVk=
