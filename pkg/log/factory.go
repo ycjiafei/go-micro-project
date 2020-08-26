@@ -12,6 +12,17 @@ type Factory struct {
 	logger *zap.Logger
 }
 
+var SLog Factory
+
+func InitDefault() {
+	SLog = DefaultFactory()
+}
+
+func DefaultFactory() Factory {
+	logger, _ := zap.NewDevelopment()
+	return NewFactory(logger)
+}
+
 func NewFactory(logger *zap.Logger) Factory {
 	return Factory{logger: logger}
 }

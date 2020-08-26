@@ -3,13 +3,14 @@ package dao
 import (
 	"github.com/ycjiafei/go-micro-project/database"
 	"github.com/ycjiafei/go-micro-project/database/structs"
-	"log"
+	slog "github.com/ycjiafei/go-micro-project/pkg/log"
+	"go.uber.org/zap"
 )
 
 func GetUserInfoByUid(uid int64) structs.UserInfo {
 	db, err := database.NewMysqlConn()
 	if err != nil {
-		log.Printf("连接数据库失败, err: %v", err)
+		slog.SLog.Bg().Error("连接数据库失败", zap.String("err", err.Error()))
 		return structs.UserInfo{}
 	}
 	defer db.Close()
@@ -22,7 +23,7 @@ func GetUserInfoByUid(uid int64) structs.UserInfo {
 func GetUserInfoByPhone(phone string) structs.UserInfo {
 	db, err := database.NewMysqlConn()
 	if err != nil {
-		log.Printf("连接数据库失败, err: %v", err)
+		slog.SLog.Bg().Error("连接数据库失败", zap.String("err", err.Error()))
 		return structs.UserInfo{}
 	}
 	defer db.Close()
