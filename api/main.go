@@ -1,7 +1,6 @@
 package main
 
 import (
-	"errors"
 	"github.com/opentracing/opentracing-go"
 	"github.com/ycjiafei/go-micro-project/api/routes"
 	slog "github.com/ycjiafei/go-micro-project/pkg/log"

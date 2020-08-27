@@ -120,6 +120,8 @@ github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200820090751-ccc1b42fe104/go.m
 github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200821042131-829ea6b31ed4/go.mod h1:ACyjHwUYQs9Lsgfghavpsf5gOyJt2wdtzlMkmfis49o=
 github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200825072243-52992dd3ae68 h1:RJtijPoawCgXl9Qo/xznLPvW+u1B/V5ZA+a7mAkiNUM=
 github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200825072243-52992dd3ae68/go.mod h1:AAvYdMG2WNMKvhB9MCN5Xb1aQ6wNnn9z2Eo+dRmcrVA=
+github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200826112512-0746d2661759 h1:Z23qErMPlCeMn0M4KSd2g0Eh4GbM+6l0ezFhh96VMeM=
+github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200826112512-0746d2661759/go.mod h1:AAvYdMG2WNMKvhB9MCN5Xb1aQ6wNnn9z2Eo+dRmcrVA=
 github.com/ycjiafei/go-micro-project/user-srv v0.0.0-20200820095928-122563965189 h1:t7/gxjyf7KKQ9A0ge4vHGD1WZjtuAJGLCNK0oorfk4s=
 github.com/ycjiafei/go-micro-project/user-srv v0.0.0-20200820095928-122563965189/go.mod h1:IPvOBPevfUk2nmhSIGpZIMYDoOPqSXj2IkmcyJKtVN0=
 github.com/ycjiafei/go-micro-project/user-srv v0.0.0-20200820103331-ef821cdb280f h1:9JFGSvcnfnSzl1sFgQ9LGwk/Yhc0j5R5cwb5dVewEo8=

@@ -11,8 +11,9 @@ require (
 	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/ycjiafei/go-micro-project/database v0.0.0-20200820133556-262eb27eaef3
-	github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200825072243-52992dd3ae68
+	github.com/ycjiafei/go-micro-project/pkg v0.0.0-20200826112512-0746d2661759
 	github.com/ycjiafei/go-micro-project/user-srv v0.0.0-20200820125343-b0b51cbe68ca
+	go.uber.org/zap v1.15.0
 	golang.org/x/net v0.0.0-20200813134508-3edf25e44fcc // indirect
 	golang.org/x/sys v0.0.0-20200819171115-d785dc25833f // indirect
 	golang.org/x/text v0.3.3 // indirect
