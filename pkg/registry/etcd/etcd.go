@@ -48,24 +48,17 @@ func (e *etcdRegistry) Register(s *registry.Service, opts ...registry.RegisterOp
 		return errors.New("服务至少包含一个节点")
 	}
 	for _, n := range s.Nodes {
-		if err := e.registerNode(s, n, opts...); err != nil {
+		e.RLock()
+		node, ok := e.register[s.Name + n.Id]
+		e.RUnlock()
+		if ok {
+			n = node
+		}
+		if err := e.registryEtcd(s, n); err != nil {
 			return err
 		}
 	}
 
-	return nil
-}
-
-func (e *etcdRegistry) registerNode(s *registry.Service, node *registry.Node, opts ...registry.RegisterOption) error {
-	e.RLock()
-	n, ok := e.register[s.Name + node.Id]
-	e.RUnlock()
-	if ok {
-		node = n
-	}
-	if err := e.registryEtcd(s, node); err != nil {
-		return err
-	}
 	return nil
 }
 
